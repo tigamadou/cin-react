@@ -6,12 +6,12 @@ const Footer: React.FC = () => {
         {/* Main Footer Content */}
         <div className="row mb-4">
           {/* Logo and Description */}
-          <div className="col-lg-4 mb-4">
+          <div className="col-lg-3 mb-4">
             <div className="d-flex align-items-center mb-3 ">
               <div className="d-flex align-items-center justify-content-center">
                 <div className="bg-white p-2">
                   <img 
-                    src="/src/assets/logo-cin.jpeg" 
+                    src="/logo-cin.jpeg" 
                     alt="CIN Logo" 
                     className="me-3" 
                     style={{ height: '50px', width: 'auto' }}
@@ -78,9 +78,8 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 col-md-6 mb-4">
             <h5 className="mb-3" style={{color: 'white'}}>Contact</h5>
             <div className="text-white">
-              <div className="mb-3">
-                <p className="mb-2">
-                  <i className="bi bi-envelope me-2" style={{color: 'var(--cin-accent)'}}></i>
+              <div className="mb-3 d-flex align-items-center justify-content-start">
+                <p className="mb-0">
                   <strong>Email:</strong>
                 </p>
                 <p className="mb-0 ms-4">
@@ -89,9 +88,8 @@ const Footer: React.FC = () => {
                   </a>
                 </p>
               </div>
-              <div className="mb-3">
-                <p className="mb-2">
-                  <i className="bi bi-telephone me-2" style={{color: 'var(--cin-accent)'}}></i>
+              <div className="mb-3 d-flex align-items-center justify-content-start">
+                <p className="mb-0">
                   <strong>Téléphone:</strong>
                 </p>
                 <p className="mb-0 ms-4">
@@ -100,9 +98,8 @@ const Footer: React.FC = () => {
                   </a>
                 </p>
               </div>
-              <div className="mb-3">
-                <p className="mb-2">
-                  <i className="bi bi-geo-alt me-2" style={{color: 'var(--cin-accent)'}}></i>
+              <div className="mb-3 d-flex align-items-center justify-content-start">
+                <p className="mb-0">
                   <strong>Adresse:</strong>
                 </p>
                 <p className="mb-0 ms-4 small">

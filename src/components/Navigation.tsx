@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
       <div className="container px-4">
         <a className="navbar-brand d-flex align-items-center" href="#home" onClick={(e) => handleNavClick(e, 'home')}>
           <img 
-            src="/src/assets/logo-cin.jpeg" 
+            src="/logo-cin.jpeg" 
             alt="CIN Logo" 
             className="me-2" 
             style={{ height: '40px', width: 'auto' }}

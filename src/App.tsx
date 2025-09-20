@@ -10,6 +10,7 @@ import {
   AccommodationSection,
   StatsSection,
   RegistrationSection,
+  MapSection,
   Footer
 } from './components';
 import type { TimeLeft } from './types';
@@ -58,6 +59,7 @@ function App() {
       <AccommodationSection />
       <StatsSection />
       <RegistrationSection />
+      <MapSection />
       <Footer />
     </div>
   );

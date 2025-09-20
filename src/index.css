@@ -307,7 +307,7 @@ html {
   flex: 0 0 120px;
   font-size: 1rem;
   font-weight: 600;
-  color: #333;
+  color: #000;
   text-align: left;
 }
 
@@ -1381,7 +1381,7 @@ html {
 .schedule-time-minimal {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--cin-primary);
+  color: #000;
   text-align: center;
   margin-right: 1.5rem;
   flex-shrink: 0;
@@ -1785,4 +1785,22 @@ html {
 footer a:hover {
   transform: translateY(-2px);
   transition: transform 0.2s ease;
+}
+
+/* Map Section Styles */
+.map-section {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
