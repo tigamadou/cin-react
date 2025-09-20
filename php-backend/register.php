@@ -6,13 +6,13 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // Configuration
 $config = [
-    'smtp_host' => 'smtp.gmail.com',
-    'smtp_port' => 587,
-    'smtp_username' => 'your-email@gmail.com',
-    'smtp_password' => 'your-app-password',
-    'from_email' => 'conference@cin.bj',
+    'smtp_host' => 'mail.vehosty.com',
+    'smtp_port' => 465,
+    'smtp_username' => 'cin@magestive.com',
+    'smtp_password' => '9Vdor4I4Q&',
+    'from_email' => 'cin@magestive.com',
     'from_name' => 'CIN Conference',
-    'notification_email' => 'conference@cin.bj'
+    'notification_email' => 'cin@magestive.com'
 ];
 
 // Function to send email using PHPMailer
@@ -52,7 +52,20 @@ function sendEmailSMTP($to, $subject, $body, $isHTML = true) {
             $mail->Port = $config['smtp_port'];
             $mail->CharSet = 'UTF-8';
             
-            // Recipients
+            // Test SMTP connection first
+            $mail->SMTPDebug = 0; // Disable debug output for production
+            $mail->Timeout = 30; // Set timeout to 30 seconds
+            
+            // Test connection without sending email
+            if (!$mail->smtpConnect()) {
+                error_log("SMTP connection test failed: " . $mail->ErrorInfo);
+                return false;
+            }
+            
+            // Close the test connection
+            $mail->smtpClose();
+            
+            // Now proceed with actual email sending
             $mail->setFrom($config['from_email'], $config['from_name']);
             $mail->addAddress($to);
             
@@ -61,8 +74,10 @@ function sendEmailSMTP($to, $subject, $body, $isHTML = true) {
             $mail->Subject = $subject;
             $mail->Body = $body;
             
+            // Send the email
             $mail->send();
             return true;
+            
         } catch (Exception $e) {
             error_log("Email sending failed: " . $mail->ErrorInfo);
             return false;
@@ -120,12 +135,12 @@ $notificationBody = "
 <head>
     <meta charset='UTF-8'>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #1e3a8a, #3b82f6, #f9ca46); color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
-        .content { background: #f8f9fa; padding: 20px; border-radius: 0 0 8px 8px; }
+        .header { padding: 20px; text-align: center; border-bottom: 2px solid #e5e7eb; }
+        .content { padding: 20px; }
         .field { margin-bottom: 15px; }
-        .field strong { color: #1e3a8a; }
+        .field strong { color: #374151; }
         .footer { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
     </style>
 </head>
@@ -174,14 +189,14 @@ $confirmationBody = "
 <head>
     <meta charset='UTF-8'>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #1e3a8a, #3b82f6, #f9ca46); color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
-        .content { background: #f8f9fa; padding: 20px; border-radius: 0 0 8px 8px; }
+        .header { padding: 20px; text-align: center; border-bottom: 2px solid #e5e7eb; }
+        .content { padding: 20px; }
         .field { margin-bottom: 15px; }
-        .field strong { color: #1e3a8a; }
+        .field strong { color: #374151; }
         .footer { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
-        .cta { background: #dc2626; color: white; padding: 15px; text-align: center; border-radius: 5px; margin: 20px 0; }
+        .cta { padding: 15px; text-align: center; border: 1px solid #d1d5db; margin: 20px 0; }
     </style>
 </head>
 <body>

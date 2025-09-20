@@ -5,19 +5,19 @@
 return [
     // SMTP Configuration
     'smtp' => [
-        'host' => 'smtp.gmail.com',
-        'port' => 587,
-        'username' => 'your-email@gmail.com',
-        'password' => 'your-app-password',
+        'host' => 'mail.vehosty.com',
+        'port' => 465,
+        'username' => 'cin@magestive.com',
+        'password' => '9Vdor4I4Q&',
         'encryption' => 'tls', // 'tls' or 'ssl'
     ],
     
     // Email Configuration
     'email' => [
-        'from_email' => 'conference@cin.bj',
+        'from_email' => 'noreply@cin.bj',
         'from_name' => 'CIN Conference',
-        'notification_email' => 'conference@cin.bj',
-        'reply_to' => 'conference@cin.bj',
+        'notification_email' => 'noreply@cin.bj',
+        'reply_to' => 'noreply@cin.bj',
     ],
     
     // Security

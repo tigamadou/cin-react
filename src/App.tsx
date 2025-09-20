@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
+  Loader,
   Navigation,
   HeroSection,
   AboutSection,
@@ -17,6 +18,7 @@ import type { TimeLeft } from './types';
 import { speakers, scheduleByDay } from './data/conferenceData';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -25,6 +27,10 @@ function App() {
   });
 
   const eventDate = new Date('2025-09-27T10:00:00').getTime();
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -46,6 +52,11 @@ function App() {
 
     return () => clearInterval(timer);
   }, [eventDate]);
+
+
+  if (isLoading) {
+    return <Loader onLoadingComplete={handleLoadingComplete} />;
+  }
 
   return (
     <div className="min-vh-100">

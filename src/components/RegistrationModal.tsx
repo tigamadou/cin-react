@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface RegistrationFormData {
   firstName: string;
@@ -33,6 +33,25 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+  // Reset form when modal is closed
+  useEffect(() => {
+    if (!isOpen) {
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        organization: '',
+        position: '',
+        country: '',
+        dietaryRequirements: '',
+        specialRequests: ''
+      });
+      setSubmitStatus('idle');
+      setIsSubmitting(false);
+    }
+  }, [isOpen]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -48,7 +67,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
 
     try {
       // Send to PHP backend
-      const endpoint = import.meta.env.VITE_REGISTRATION_ENDPOINT || '/api/register.php';
+      const endpoint = import.meta.env.VITE_REGISTRATION_ENDPOINT || '/register.php';
       
       // Create FormData for PHP $_POST handling
       const formDataToSend = new FormData();
