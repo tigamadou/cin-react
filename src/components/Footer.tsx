@@ -1,7 +1,7 @@
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer text-white py-5">
+    <footer id="contact" className="footer text-white py-5">
       <div className="container">
         {/* Main Footer Content */}
         <div className="row mb-4">

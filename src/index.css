@@ -210,7 +210,7 @@ html {
 
 /* Hero section enhancements */
 .hero-section {
-  min-height: 70vh;
+  min-height: calc(100vh - 89px);
   display: flex;
   align-items: center;
 }
@@ -1803,4 +1803,28 @@ footer a:hover {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Color Banner Styles */
+.color-banner {
+  display: flex;
+  width: 100%;
+  height: 5px;
+}
+
+.banner-column {
+  flex: 1;
+  height: 100%;
+}
+
+.banner-column.green {
+  background-color: #28a745; /* Bootstrap green */
+}
+
+.banner-column.yellow {
+  background-color: #ffc107; /* Bootstrap yellow */
+}
+
+.banner-column.red {
+  background-color: #dc3545; /* Bootstrap red */
 }

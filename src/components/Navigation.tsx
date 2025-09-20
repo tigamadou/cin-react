@@ -45,6 +45,9 @@ const Navigation: React.FC = () => {
             <li className="nav-item">
               <a className="nav-link fw-semibold" href="#accommodation" onClick={(e) => handleNavClick(e, 'accommodation')}>Hébergement</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link fw-semibold" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
+            </li>
           </ul>
         </div>
       </div>
