@@ -1,4 +1,9 @@
 const DownloadSection: React.FC = () => {
+  const handleDownload = () => {
+    // Open the PDF in a new tab
+    window.open('/agenda_2025.pdf', '_blank');
+  };
+
   return (
     <section id="download" className="py-5 bg-white">
       <div className="container">
@@ -10,13 +15,9 @@ const DownloadSection: React.FC = () => {
                   <div className="brochure-cover">
                     <div className="brochure-image">
                       <img 
-                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" 
-                        alt="Conference Brochure"
+                        src="/agenda_2025_preview.png" 
+                        alt="Conference Brochure Preview"
                       />
-                    </div>
-                    <div className="brochure-text">
-                      <span className="brochure-title">CIN </span>
-                      <span className="brochure-year">2025</span>
                     </div>
                   </div>
                 </div>
@@ -35,7 +36,7 @@ const DownloadSection: React.FC = () => {
                 Le programme complet contient l'agenda détaillé, les informations sur les intervenants, 
                 les sessions parallèles et toutes les informations pratiques pour participer à cet événement exceptionnel.
               </p>
-              <button className="download-btn">
+              <button className="download-btn" onClick={handleDownload}>
                 TÉLÉCHARGER PDF
               </button>
             </div>
