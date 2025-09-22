@@ -210,27 +210,25 @@ html {
 
 /* Hero section enhancements */
 .hero-section {
-  min-height: calc(100vh - 89px);
+  min-height: calc(60vh - 89px);
   display: flex;
   align-items: center;
+  background-color: var(--cin-secondary);
 }
 
-.hero-background {
-  top: 0;
-  left: 0;
-  z-index: -2;
+.hero-section-bg {
+
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.hero-section-footer {
+  background-color: var(--cin-yellow-light);
+}
+.hero-section-body {
+  background-color: var(--cin-secondary);
 }
 
-.hero-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* filter: blur(2px); */
-}
-  .hero-section .hero-background-overlay {
-    background: linear-gradient(135deg, var(--cin-secondary) 0%, var(--cin-primary) 50%, var(--cin-yellow) 100%);
-    opacity: 0.8;
-  }
 
 /* Call to action bar styling with CIN colors */
 .bg-dark {
@@ -1231,6 +1229,9 @@ html {
 .text-warning {
   color: var(--cin-accent) !important;
 }
+.text-yellow {
+  color: var(--cin-yellow) !important;
+}
 
 /* About section styling to match Eventr design */
 .bg-light {
@@ -1275,12 +1276,12 @@ html {
 /* Speaker cards styling */
 .speaker-card {
   padding: 0px;
-  background-color: #fff;
+  /* background-color: #fff; */
   /* border-radius: 8px; */
   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); */
   transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
-  height: 100%;
+  /* border: 1px solid #f0f0f0; */
+  /* height: 100%; */
 }
 .speaker-content {
   padding: 16px;
@@ -1397,13 +1398,14 @@ html {
 /* CIN Logo Colors - Blue and Green Theme */
 :root {
   --cin-primary: #1e3a8a;      /* Deep Blue */
-  --cin-secondary: #059669;    /* Emerald Green */
+  --cin-secondary: #276747;    /* Emerald Green */
   --cin-accent: #3b82f6;       /* Bright Blue */
   --cin-light: #f0f9ff;        /* Light Blue */
   --cin-dark: #1e293b;         /* Dark Blue-Gray */
-  --cin-red: #dc2626;          /* Red from logo */
+  --cin-red: #b94158;          /* Red from logo */
   --cin-red-dark: #b91c1c;     /* Darker red for hover */
-  --cin-yellow: #f9ca46;       /* Yellow/Gold accent */
+  --cin-yellow: #e7be76;       /* Yellow/Gold accent */
+  --cin-yellow-light: #f0e6d4;       /* Yellow/Gold accent */
 }
 
 /* White navbar styling with CIN colors */
@@ -1421,22 +1423,22 @@ html {
 .navbar-nav .nav-link {
   transition: color 0.3s ease;
   position: relative;
-  color: var(--cin-primary) !important;
+  color: var(--cin-secondary) !important;
   font-weight: 600;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--cin-secondary) !important;
+  color: var(--cin-red) !important;
 }
 
 .navbar-nav .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 3px;
+  height: 1px;
   bottom: -5px;
   left: 50%;
-  background: linear-gradient(90deg, var(--cin-primary), var(--cin-secondary));
+  background: linear-gradient(90deg, var(--cin-red), var(--cin-red-dark));
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -1483,7 +1485,7 @@ html {
 /* Counter container */
 .counter-container {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .counter-item {
@@ -1491,31 +1493,27 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 0;
-  width: 100px;
-  height: 150px;
 }
 
 .counter-item-value {
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: var(--cin-primary);
+  color: var(--cin-red);
+  line-height: 90%;
 
 }
 
 .counter-item-label {
-  font-size: 0.8rem;
-  color: var(--cin-primary);
+  font-size: 1.5rem;
+  color: var(--cin-red);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 /* Big Call-to-Action Button */
 .btn-cta {
-  background: linear-gradient(135deg, var(--cin-red-dark) 0%, var(--cin-red) 100%);
-  color: white !important;
+  background: var(--cin-yellow);
+  color: var(--cin-secondary) !important;
   border: none;
   padding: 1rem 3rem;
   font-size: 1.2rem;
@@ -1523,22 +1521,20 @@ html {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .btn-cta:hover {
-  background: linear-gradient(135deg, var(--cin-red-dark) 0%, var(--cin-red) 100%);
+  background: #fff;
   transform: scale(1.05);
-  box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4);
-  color: white !important;
+  color: var(--cin-secondary) !important;
 }
 
 .btn-cta:active {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+  background: var(--cin-yellow);
 }
 
 .btn-cta::before {
@@ -1776,7 +1772,7 @@ footer a:hover {
 .color-banner {
   display: flex;
   width: 100%;
-  height: 5px;
+  height: 10px;
 }
 
 .banner-column {
