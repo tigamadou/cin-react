@@ -85,30 +85,23 @@ const StatsSection: React.FC = () => {
   }, [isVisible, stats]);
 
   return (
-    <section id="stats" className="stats-section" ref={sectionRef}>
-      <div className="stats-background">
-        <img 
-          src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=400&fit=crop&blur=20" 
-          alt="Conference Background"
-          className="stats-bg-image"
-        />
-        <div className="stats-overlay"></div>
-      </div>
-      
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="stats-container">
-              {stats.map((stat, index) => (
-                <div key={stat.id} className="stat-item">
-                  <div className="stat-icon">
-                    <i className={`bi ${stat.icon}`}></i>
+    <section id="stats" className="stats-section" ref={sectionRef} style={{backgroundImage: `url(https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=400&fit=crop&blur=20)`}}>
+      <div className="stats-overlay">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="stats-container">
+                {stats.map((stat, index) => (
+                  <div key={stat.id} className="stat-item">
+                    <div className="stat-icon">
+                      <i className={`bi ${stat.icon}`}></i>
+                    </div>
+                    <div className="stat-number">{counts[index]}</div>
+                    <div className="stat-label">{stat.label}</div>
+                    {index < stats.length - 1 && <div className="stat-separator"></div>}
                   </div>
-                  <div className="stat-number">{counts[index]}</div>
-                  <div className="stat-label">{stat.label}</div>
-                  {index < stats.length - 1 && <div className="stat-separator"></div>}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

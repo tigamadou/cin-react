@@ -1,4 +1,4 @@
-
+import logo from '../assets/logo.svg';
 const Navigation: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -14,16 +14,15 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3 shadow-sm">
-      <div className="container px-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top py-1 shadow-sm">
+      <div className="container">
         <a className="navbar-brand d-flex align-items-center" href="#home" onClick={(e) => handleNavClick(e, 'home')}>
           <img 
-            src="/logo-cin.jpeg" 
+            src={logo} 
             alt="CIN Logo" 
             className="me-2" 
-            style={{ height: '40px', width: 'auto' }}
+            style={{ height: '80px', width: 'auto' }}
           />
-          <span className="fw-bold fs-3 text-dark">CIN</span>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>

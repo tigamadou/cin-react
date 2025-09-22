@@ -1,4 +1,4 @@
-
+import logo from '../assets/Logo_white.svg';
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="footer text-white py-5">
@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 mb-4">
             <div className="d-flex align-items-center mb-3 ">
               <div className="d-flex align-items-center justify-content-center">
-                <div className="bg-white p-2">
+                <div>
                   <img 
-                    src="/logo-cin.jpeg" 
+                    src={logo} 
                     alt="CIN Logo" 
                     className="me-3" 
-                    style={{ height: '50px', width: 'auto' }}
+                    style={{ height: '80px', width: 'auto' }}
                   />
                 </div>
               </div>

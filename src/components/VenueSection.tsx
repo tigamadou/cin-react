@@ -1,15 +1,8 @@
 const VenueSection: React.FC = () => {
   return (
-    <section id="venue" className="venue-section">
-      <div className="venue-background">
-        <img 
-          src="https://www.cvent.com/venues/_next/image?url=https%3A%2F%2Fimages.cvent.com%2Fcsn%2F0ede71bc-3a50-468d-8e24-04a6213607df%2Fimages%2Fed9eb1c9da524bab906e26476e97dcd8_large!_!c506d6a79882a78415a84f99dec4e3f1.jpg&w=1200&q=80" 
-          alt="Conference Venue"
-          className="venue-bg-image"
-        />
-      </div>
+    <section id="venue" className="venue-section" style={{backgroundImage: `url(https://www.cvent.com/venues/_next/image?url=https%3A%2F%2Fimages.cvent.com%2Fcsn%2F0ede71bc-3a50-468d-8e24-04a6213607df%2Fimages%2Fed9eb1c9da524bab906e26476e97dcd8_large!_!c506d6a79882a78415a84f99dec4e3f1.jpg&w=1200&q=80)`}}>
       
-      <div className="venue-overlay">
+      <div className="venue-overlay" >
         <div className="container">
           <div className="row">
             <div className="col-lg-6">

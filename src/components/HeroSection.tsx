@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { TimeLeft } from '../types';
 import RegistrationModal from './RegistrationModal';
+import heroBackground from '../assets/pictogramm.svg';
 
 interface HeroSectionProps {
   timeLeft: TimeLeft;
@@ -19,7 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ timeLeft }) => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="hero-section  py-5 position-relative">
+      <section id="home" className="hero-section  py-5 position-relative" style={{backgroundImage: `url(${heroBackground})`}}>
         <div className="container position-relative" style={{zIndex: 1}}>
           <div className="row align-items-center hero-section-bg">
             
