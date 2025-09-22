@@ -1,97 +1,114 @@
 import type { Speaker, ScheduleByDay } from '../types';
 
 export const speakers: Speaker[] = [
+  // Panel 1 - Fardeau intergénérationnel de la malnutrition
   {
     id: 1,
-    name: "Dr. Patrice TALON",
-    title: "Président de la République du Bénin",
-    company: "République du Bénin",
-    bio: "Chef de l'État béninois depuis 2016, Dr. Patrice Talon s'est engagé dans la lutte contre la malnutrition et le développement durable en Afrique. Sous sa présidence, le Bénin a mis en place des politiques innovantes pour améliorer la sécurité alimentaire et nutritionnelle de sa population. Il est un fervent défenseur de l'autosuffisance alimentaire et du développement rural durable.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Pr Jacques BERGER",
+    title: "Professeur de Nutrition",
+    company: "Université de Montpellier",
+    bio: "Expert reconnu en nutrition avec une expertise particulière dans l'étude du fardeau intergénérationnel de la malnutrition. Pr BERGER présentera les études sur le constat du fardeau intergénérationnel de la malnutrition (avec un focus sur la partie dénutrition) et la perpétuité de la pauvreté si rien n'est fait. Il abordera les effets des carences en micronutriments, notamment sur le développement cognitif et la capacité d'apprentissage.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/jacques-berger",
+      twitter: "https://twitter.com/jacques_berger"
     }
   },
   {
     id: 2,
-    name: "Dr. SOSSA",
-    title: "Directeur Général de l'ANAN",
-    company: "Agence Nationale d'Assainissement et de Nutrition",
-    bio: "Expert reconnu en nutrition et assainissement avec plus de 15 ans d'expérience dans la lutte contre la malnutrition au Bénin et en Afrique. Dr. SOSSA dirige l'ANAN depuis 2018 et a mis en place des programmes innovants pour améliorer la nutrition des populations vulnérables. Il est également consultant pour plusieurs organisations internationales.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Pr Hélène DELISLE",
+    title: "Professeure de Nutrition",
+    company: "Université de Montréal",
+    bio: "Spécialiste de l'effet intergénérationnel de la malnutrition et de l'augmentation du risque de développement des maladies non transmissibles à l'âge adulte en cas d'exposition à un environnement obésogène. Pr DELISLE abordera les mécanismes biologiques qui pourraient expliquer ce phénomène. Son intervention sera présentée sous format vidéo préenregistrée.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/helene-delisle",
+      twitter: "https://twitter.com/helene_delisle"
     }
   },
   {
     id: 3,
-    name: "Représentant UNICEF",
-    title: "Directeur Exécutif Adjoint",
-    company: "UNICEF",
-    bio: "Expert international en nutrition et développement de l'enfant avec plus de 20 ans d'expérience dans la lutte contre la malnutrition infantile. Le représentant UNICEF dirige les programmes de nutrition en Afrique de l'Ouest et travaille en étroite collaboration avec les gouvernements pour améliorer la santé des enfants. Il est également auteur de plusieurs publications sur la nutrition maternelle et infantile.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Dr Mahamadou TANIMOUNE",
+    title: "Conseiller Principal en Politique et Programme",
+    company: "Programme Alimentaire Mondial (PAM)",
+    bio: "Dr. Tanimoune Mahamadou est Conseiller Principal en politique et programme au siège mondial du PAM, couvrant l'Afrique de l'Ouest et du Centre, basé à Dakar. Diplômé en Nutrition et Science de la population, il est spécialisé dans la prévention de la malnutrition à grande échelle. Il a coordonné en Afrique et en Asie l'un des plus vaste programme mondial, touchant plus de 4 millions d'enfants, d'adolescents et de femmes enceintes et allaitantes au Pakistan. Expert en approches multisectorielles et en renforcement des systèmes alimentaires, il traduit les données scientifiques en solutions concrètes pour réduire le retard de croissance et améliorer la nutrition et la santé des populations.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/mahamadou-tanimoune",
+      twitter: "https://twitter.com/mahamadou_tani"
     }
   },
   {
     id: 4,
-    name: "Vice-Président Banque Mondiale",
-    title: "Vice-Président Afrique de l'Ouest et du Centre",
-    company: "Banque Mondiale",
-    bio: "Leader dans le financement du développement et la lutte contre la pauvreté en Afrique.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Dr Banda N'DIAYE",
+    title: "Expert en Nutrition",
+    company: "Organisation Mondiale de la Santé",
+    bio: "Dr N'DIAYE évoquera le cas spécifique de la carence en iode comme exemple de carence en micronutriments et son impact sur le développement cognitif de l'enfant et la répercussion sur le plan socio-économique pour les pays. Il abordera également les stratégies mises au point pour lutter contre cette carence.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/banda-ndiaye",
+      twitter: "https://twitter.com/banda_ndiaye"
     }
   },
+  // Panel 2 - Solutions appliquées dans la lutte contre la malnutrition
   {
     id: 5,
-    name: "Président BAD",
-    title: "Président de la Banque Africaine de Développement",
-    company: "Banque Africaine de Développement",
-    bio: "Leader du développement économique et social en Afrique, engagé dans la lutte contre la malnutrition.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Dr Leopold FEUZEU",
+    title: "Maître de Conférences et Épidémiologiste",
+    company: "Équipe de Recherche en Épidémiologie Nutritionnelle (EREN-CRESS)",
+    bio: "Le Dr FEZEU Kamedjie Léopold est un médecin d'origine camerounaise, diplômé en 1999, avec trois années d'expérience clinique avant de se tourner vers la recherche. Il a ensuite obtenu un Master en méthodes épidémiologiques et statistiques (Université Paris-11, 2004), puis un doctorat en santé publique option épidémiologie (Université de Yaoundé I et Université Paris-11, 2009). Depuis plus de quinze ans, il est maître de conférences et épidémiologiste au sein de l'Équipe de Recherche en Épidémiologie Nutritionnelle (EREN-CRESS, France). Ses travaux portent sur les comportements alimentaires et l'activité physique, leurs déterminants et leurs impacts mécanistiques sur la santé, en particulier dans le domaine des maladies cardiométaboliques. Il a joué un rôle clé dans le développement et la validation du NutriScore, le logo nutritionnel présent en face avant des emballages en France et adopté dans plusieurs pays européens.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/leopold-feuzeu",
+      twitter: "https://twitter.com/leopold_feuzeu"
     }
   },
   {
     id: 6,
-    name: "Vice-Président Nigeria",
-    title: "Vice-Président de la République Fédérale du Nigeria",
-    company: "République Fédérale du Nigeria",
-    bio: "Leader politique nigérian, engagé dans la coopération régionale pour le développement de l'Afrique.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Dr Hoang NGAN",
+    title: "Experte en Nutrition",
+    company: "Ministère de la Santé du Vietnam",
+    bio: "Dr. NGAN présentera de manière globale la stratégie nationale qu'a adopté le Vietnam pour parvenir à baisser la prévalence de la malnutrition chronique au niveau national. Elle mettra en évidence la volonté politique se traduisant par l'obligation de chaque province d'investir dans la réduction de la malnutrition. Elle nous présentera quelques exemples d'interventions et évoquera également des mesures de lutte contre l'obésité à travers la loi sur la taxation des boissons sucrées.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/hoang-ngan",
+      twitter: "https://twitter.com/hoang_ngan"
     }
   },
   {
     id: 7,
-    name: "Ministre d'État",
-    title: "Ministre d'État chargé du Développement",
-    company: "Gouvernement du Bénin",
-    bio: "Ministre responsable du développement au Bénin, engagé dans la lutte contre la malnutrition et la pauvreté.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    social: {}
+    name: "Mme Clémence BOULLE-MARTINAUD",
+    title: "Directrice du Programme Santé",
+    company: "Gret - ONG de développement",
+    bio: "Clémence Boulle Martinaud, diplômée d'un MBA, est spécialisée en nutrition, marketing social et développement international. Après plusieurs années dans le secteur agroalimentaire, elle a rejoint le Gret en 2010 où elle a conçu et piloté des projets durables de nutrition, notamment via l'appui à des entreprises sociales et PME pour développer des modèles économiques à impact au service des populations vulnérables. Forte de plus de 15 ans d'expérience dans plus de dix pays, elle dirige aujourd'hui le programme international « Santé : Nutrition et Protection sociale » du Gret, qui rassemble une trentaine de projets et mobilise une expertise reconnue en nutrition et politiques sociales.",
+    image: "https://avatar.iran.liara.run/public",
+    social: {
+      linkedin: "https://linkedin.com/in/clemence-boulle-martinaud",
+      twitter: "https://twitter.com/clemence_bm"
+    }
   },
   {
     id: 8,
-    name: "Protocole d'État",
-    title: "Protocole d'État et des cérémonies",
-    company: "Gouvernement du Bénin",
-    bio: "Responsable du protocole d'État, organisateur des cérémonies officielles et des événements internationaux.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Pr. Kaleab BAYE",
+    title: "Professeure Titulaire de Nutrition Humaine",
+    company: "Université d'Addis-Abeba",
+    bio: "Kaleab Baye est professeure titulaire de nutrition humaine, ancien directeur du Centre des sciences de l'alimentation et de la nutrition (2016-2019) de l'Université d'Addis-Abeba. Il est titulaire d'un doctorat en nutrition et santé de l'Université de Montpellier, en France. Les intérêts de recherche du professeur Baye sont la nutrition maternelle et infantile, les micronutriments et les interventions visant à améliorer la qualité de l'alimentation. Le professeur Baye est rédacteur en chef adjoint de la revue Public Health Nutrition et membre du comité de rédaction de Global Food Security. Il a été rédacteur invité pour des revues telles que Maternal and Child Nutrition, Current Developments in Nutrition, Frontiers Public Health et Agriculture and Food Economics.",
+    image: "https://avatar.iran.liara.run/public",
     social: {
-      linkedin: "https://linkedin.com/in/patrice-talon",
-      twitter: "https://twitter.com/patrice_talon"
+      linkedin: "https://linkedin.com/in/kaleab-baye",
+      twitter: "https://twitter.com/kaleab_baye"
+    }
+  },
+  {
+    id: 9,
+    name: "Pr. Evariste MITCHIKPE",
+    title: "Professeur de Nutrition",
+    company: "Université d'Abomey-Calavi",
+    bio: "Expert en nutrition et développement agricole, Pr. MITCHIKPE apportera son expertise sur les approches multisectorielles dans la lutte contre la malnutrition en Afrique. Il présentera des exemples concrets d'interventions réussies et des recommandations pour une lutte plus efficace contre la malnutrition.",
+    image: "https://avatar.iran.liara.run/public",
+    social: {
+      linkedin: "https://linkedin.com/in/evariste-mitchikpe",
+      twitter: "https://twitter.com/evariste_mitch"
     }
   }
 ];
@@ -111,13 +128,13 @@ export const scheduleByDay: ScheduleByDay = {
     { time: "10:25 - 10:30", title: "Intermède culturel", type: "break" },
     { time: "10:30 - 10:40", title: "Allocution Vice-Président Nigeria", type: "keynote" },
     { time: "10:40 - 11:00", title: "Allocution Président Bénin", type: "keynote" },
-    { time: "11:00 - 11:30", title: "Conférence inaugurale", type: "keynote" },
+    { time: "11:00 - 11:30", title: "Conférence inaugurale - Pr Esther DUFLO", type: "keynote" },
     { time: "11:30 - 12:00", title: "Photo de famille et pause", type: "break" },
-    { time: "12:00 - 13:00", title: "Panel 1: Fardeau intergénérationnel", type: "session" },
-    { time: "13:00 - 13:30", title: "Échanges", type: "networking" },
+    { time: "12:00 - 13:00", title: "Panel 1: Fardeau intergénérationnel de la malnutrition", type: "session" },
+    { time: "13:00 - 13:30", title: "Questions & Réponses Panel 1", type: "networking" },
     { time: "13:30 - 14:30", title: "Déjeuner", type: "break" },
-    { time: "14:30 - 15:30", title: "Panel 2: Solutions appliquées", type: "session" },
-    { time: "15:30 - 16:00", title: "Échanges", type: "networking" },
+    { time: "14:30 - 15:30", title: "Panel 2: Solutions appliquées dans la lutte contre la malnutrition", type: "session" },
+    { time: "15:30 - 16:00", title: "Questions & Réponses Panel 2", type: "networking" },
     { time: "16:00 - 16:30", title: "Pause-café", type: "break" },
     { time: "16:30 - 16:45", title: "Synthèse et Déclaration", type: "session" },
     { time: "16:45 - 17:00", title: "Allocution de clôture", type: "keynote" },

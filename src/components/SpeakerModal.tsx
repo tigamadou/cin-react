@@ -21,7 +21,7 @@ const SpeakerModal: React.FC<SpeakerModalProps> = ({ speaker, isOpen, onClose })
             <div className="col-md-6">
               <div className="speaker-image-modal">
                 <img 
-                  src={speaker.image} 
+                  src={`${speaker.image}?random=${speaker.id}`} 
                   alt={speaker.name}
                   className="img-fluid"
                 />

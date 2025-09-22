@@ -27,21 +27,21 @@ const SpeakersSection: React.FC<SpeakersSectionProps> = ({ speakers }) => {
           <div className=" mb-5">
             <h2 className="display-6 fw-bold mb-3 text-dark">SPEAKERS</h2>
           </div>
-          <div className="row">
+          <div className="row g-4">
             {speakers.map(speaker => (
-              <div key={speaker.id} className="col-lg-3 col-md-6 mb-4">
+              <div key={speaker.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div 
-                  className="speaker-card text-center"
+                  className="speaker-card text-center h-100"
                   onClick={() => handleSpeakerClick(speaker)}
                 >
                   <div className="speaker-image">
                     <img 
-                      src={speaker.image} 
+                      src={`${speaker.image}?random=${speaker.id}`} 
                       alt={speaker.name}
-                      style={{ width: '100%',  objectFit: 'cover' }}
+                      style={{ width: '100%', height: '250px', objectFit: 'cover' }}
                     />
                   </div>
-                  <div className="speaker-content">
+                  <div className="speaker-content p-3">
                     <h5 className="fw-bold mb-2 text-dark">{speaker.name}</h5>
                     <div className="speaker-separator mb-2"></div>
                     <p className="text-muted text-uppercase small fw-semibold mb-1">{speaker.title}</p>
