@@ -8,7 +8,7 @@ import {
   ScheduleSection,
   DownloadSection,
   VenueSection,
-  AccommodationSection,
+  // AccommodationSection,
   StatsSection,
   RegistrationSection,
   MapSection,
@@ -65,9 +65,8 @@ function App() {
       <AboutSection />
       <SpeakersSection speakers={speakers} />
       <ScheduleSection scheduleByDay={scheduleByDay} />
-      <DownloadSection />
       <VenueSection />
-      <AccommodationSection />
+      <DownloadSection />
       <StatsSection />
       <RegistrationSection />
       <MapSection />

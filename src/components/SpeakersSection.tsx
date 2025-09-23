@@ -27,7 +27,7 @@ const SpeakersSection: React.FC<SpeakersSectionProps> = ({ speakers }) => {
           <div className=" mb-5">
             <h2 className="display-6 fw-bold mb-3 text-dark">SPEAKERS</h2>
           </div>
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {speakers.map(speaker => (
               <div key={speaker.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div 

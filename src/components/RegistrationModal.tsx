@@ -8,6 +8,7 @@ interface RegistrationFormData {
   organization: string;
   position: string;
   country: string;
+  eventType: string;
   dietaryRequirements: string;
   specialRequests: string;
 }
@@ -26,6 +27,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
     organization: '',
     position: '',
     country: '',
+    eventType: '',
     dietaryRequirements: '',
     specialRequests: ''
   });
@@ -44,6 +46,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
         organization: '',
         position: '',
         country: '',
+        eventType: '',
         dietaryRequirements: '',
         specialRequests: ''
       });
@@ -78,6 +81,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
       formDataToSend.append('organization', formData.organization);
       formDataToSend.append('position', formData.position);
       formDataToSend.append('country', formData.country);
+      formDataToSend.append('eventType', formData.eventType);
       formDataToSend.append('dietaryRequirements', formData.dietaryRequirements);
       formDataToSend.append('specialRequests', formData.specialRequests);
       
@@ -101,6 +105,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
             organization: '',
             position: '',
             country: '',
+            eventType: '',
             dietaryRequirements: '',
             specialRequests: ''
           });
@@ -261,6 +266,27 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose }
                 <option value="Canada">Canada</option>
                 <option value="États-Unis">États-Unis</option>
                 <option value="Autre">Autre</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="eventType">Type d'événement *</label>
+              <select
+                id="eventType"
+                name="eventType"
+                value={formData.eventType}
+                onChange={handleInputChange}
+                required
+                className="form-control form-control-sm"
+              >
+                <option value="">Sélectionnez l'événement</option>
+                <option value="Tout">Tout (Conférence + Village de Nutrition + Table Ronde)</option>
+                <option value="Conférence">Conférence uniquement</option>
+                <option value="Village de Nutrition">Village de Nutrition uniquement</option>
+                <option value="Table Ronde">Table Ronde uniquement</option>
+                <option value="Conférence + Village">Conférence + Village de Nutrition</option>
+                <option value="Conférence + Table Ronde">Conférence + Table Ronde</option>
+                <option value="Village + Table Ronde">Village de Nutrition + Table Ronde</option>
               </select>
             </div>
 

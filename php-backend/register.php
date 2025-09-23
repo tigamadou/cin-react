@@ -103,6 +103,7 @@ $phone = trim($_POST['phone'] ?? '');
 $organization = trim($_POST['organization'] ?? '');
 $position = trim($_POST['position'] ?? '');
 $country = trim($_POST['country'] ?? '');
+$eventType = trim($_POST['eventType'] ?? '');
 $dietaryRequirements = trim($_POST['dietaryRequirements'] ?? '');
 $specialRequests = trim($_POST['specialRequests'] ?? '');
 
@@ -116,6 +117,7 @@ if (empty($phone)) $errors[] = 'Téléphone requis';
 if (empty($organization)) $errors[] = 'Organisation requise';
 if (empty($position)) $errors[] = 'Poste requis';
 if (empty($country)) $errors[] = 'Pays requis';
+if (empty($eventType)) $errors[] = 'Type d\'événement requis';
 
 if (!empty($errors)) {
     http_response_code(400);
@@ -160,6 +162,7 @@ $notificationBody = "
             <div class='field'><strong>Organisation :</strong> {$organization}</div>
             <div class='field'><strong>Poste :</strong> {$position}</div>
             <div class='field'><strong>Pays :</strong> {$country}</div>
+            <div class='field'><strong>Type d'événement :</strong> {$eventType}</div>
             <div class='field'><strong>Date d'inscription :</strong> {$registrationDate}</div>
 ";
 
@@ -215,6 +218,7 @@ $confirmationBody = "
             <div class='field'><strong>Email :</strong> {$email}</div>
             <div class='field'><strong>Organisation :</strong> {$organization}</div>
             <div class='field'><strong>Pays :</strong> {$country}</div>
+            <div class='field'><strong>Type d'événement :</strong> {$eventType}</div>
             <div class='field'><strong>Date d'inscription :</strong> {$registrationDate}</div>
             
             <div class='cta'>
@@ -236,7 +240,7 @@ $confirmationSent = sendEmailSMTP($email, $confirmationSubject, $confirmationBod
 
 if ($notificationSent && $confirmationSent) {
     // Log registration (optional)
-    $logEntry = date('Y-m-d H:i:s') . " - Registration: {$fullName} ({$email}) from {$organization}\n";
+    $logEntry = date('Y-m-d H:i:s') . " - Registration: {$fullName} ({$email}) from {$organization} - Event: {$eventType}\n";
     file_put_contents('registrations.log', $logEntry, FILE_APPEND | LOCK_EX);
     
     echo json_encode([

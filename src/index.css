@@ -242,6 +242,10 @@ html {
   background: var(--cin-yellow) !important;
 }
 
+.bg-green {
+  background: var(--cin-secondary) !important;
+}
+
 /* Schedule Section Minimalistic Design */
 .schedule-tabs {
   display: flex;
@@ -330,7 +334,7 @@ html {
 }
 
 .brochure-container {
-  perspective: 1000px;
+  perspective: 500px;
   transform-style: preserve-3d;
 }
 
@@ -1494,6 +1498,30 @@ html {
   position: relative;
   overflow: hidden;
 }
+.btn-cta-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: var(--cin-yellow);
+  color: var(--cin-secondary);
+  border: none;
+}
+
+.btn-cta-sm.secondary {
+  background: #f0e6d4;
+  color: var(--cin-red);
+}
+
+.btn-cta-sm.secondary:hover {
+  background: #fff;
+
+}
 
 .btn-cta:hover {
   background: #fff;
@@ -1564,7 +1592,7 @@ html {
   position: absolute;
   top: 0px;
   right: 0px;
-  background: #000;
+  background: var(--cin-red-dark);
   color: white;
   border: none;
   width: 30px;
@@ -1616,14 +1644,14 @@ html {
 .speaker-name {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--cin-primary);
+  color: var(--cin-secondary);
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
 .speaker-title {
   font-size: 1.2rem;
-  color: var(--cin-secondary);
+  color: #333;
   margin-bottom: 16px;
   font-weight: 500;
 }
@@ -1641,7 +1669,7 @@ html {
   width: 45px;
   height: 45px;
   background: var(--cin-light);
-  color: var(--cin-primary);
+  color: var(--cin-secondary);
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.2rem;
@@ -1802,5 +1830,127 @@ footer a:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Download Section Styles */
+.download-card {
+
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+
+}
+
+
+
+.download-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.download-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.download-card-body {
+  flex: 1;
+}
+
+.download-card-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.download-btn-primary {
+  background: var(--cin-primary);
+  color: white;
+}
+
+.download-btn-primary:hover {
+  background: #c53030;
+  transform: translateY(-2px);
+
+}
+
+.download-btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.download-btn-secondary:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+  
+}
+
+.download-btn-outline {
+  background: transparent;
+  color: var(--cin-primary);
+  border: 2px solid var(--cin-primary);
+}
+
+.download-btn-outline:hover {
+  background: var(--cin-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.download-card-special {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+}
+
+.download-card-special .download-card-title {
+  color: var(--cin-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .download-buttons {
+    flex-direction: column;
+  }
+  
+  .download-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .download-card {
+    padding: 1.5rem;
+  }
+  
+  .download-card-title {
+    font-size: 1.1rem;
   }
 }

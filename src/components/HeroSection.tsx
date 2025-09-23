@@ -23,9 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ timeLeft }) => {
       <section id="home" className="hero-section  py-5 position-relative" style={{backgroundImage: `url(${heroBackground})`}}>
         <div className="container position-relative" style={{zIndex: 1}}>
           <div className="row align-items-center hero-section-bg">
-            
-            
-            <div className="col-md-6 col-lg-6 offset-md-6 offset-lg-6">
+            <div className="col-md-6 col-lg-6 offset-md-6 offset-lg-6 bg-green">
               <div className="mb-2 text-yellow fs-3 fw-bold">
                 Thème :
               </div>
