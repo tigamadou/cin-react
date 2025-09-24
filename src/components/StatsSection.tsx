@@ -15,13 +15,13 @@ const StatsSection: React.FC = () => {
     {
       id: 2,
       icon: "bi-mic",
-      number: 38,
+      number: 21,
       label: "INTERVENANTS"
     },
     {
       id: 3,
       icon: "bi-file-text",
-      number: 126,
+      number: 17,
       label: "PROGRAMMES"
     },
     {

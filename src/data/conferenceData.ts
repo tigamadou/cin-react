@@ -11,6 +11,7 @@ import hoangNganImg from '../assets/dr_hoang_ngan.png';
 import clemenceBoulleImg from '../assets/clemence_boulle.png';
 import kaleabBayeImg from '../assets/kaleab_baye.png';
 import evaristeMitchikpeImg from '../assets/pr_evariste_mitchikpe.png';
+import pascalineDupasImg from '../assets/pascaline_dupas.jpeg';
 
 export const speakers: Speaker[] = [
   // Conférence inaugurale
@@ -134,6 +135,18 @@ export const speakers: Speaker[] = [
     social: {
       linkedin: "https://linkedin.com/in/evariste-mitchikpe",
       twitter: "https://twitter.com/evariste_mitch"
+    }
+  },
+  {
+    id: 11,
+    name: "Pr Pascaline DUPAS",
+    title: "Professeure d'Économie et d'Affaires Publiques",
+    company: "Université de Princeton",
+    bio: "Pascaline Dupas est Professeure d'Économie et d'Affaires Publiques à l'Université de Princeton et co-Directrice Scientifique de J-PAL Afrique. Elle a rejoint le corps professoral de Princeton en juillet 2023. Auparavant, elle occupait la chaire de Kleinheinz Family Professor of International Studies à l'Université de Stanford, où elle a enseigné pendant douze ans. Elle a également occupé des postes de professeure à Dartmouth College et à l'Université de Californie à Los Angeles (UCLA). Ses recherches actuelles portent notamment sur les politiques éducatives au Ghana, les politiques de planification familiale au Burkina Faso et l'assurance maladie subventionnée par l'État en Inde. Elle est co-présidente du Bureau for Research and Economic Analysis of Development (BREAD) et chercheuse associée au National Bureau for Economic Research (NBER). En 2013, elle a reçu une bourse CAREER de la National Science Foundation, attribuée par le gouvernement américain pour distinguer et honorer des scientifiques et ingénieurs exceptionnels au début de leur carrière de recherche indépendante. En 2015, elle a reçu le Prix du Meilleur Jeune Économiste de France, décerné aux économistes français de moins de 40 ans dont les travaux sont les plus influents. Elle est Fellow de l'Econometric Society, ancienne Sloan Fellow et ancienne boursière Guggenheim. Pascaline a étudié la philosophie et l'économie en licence à l'École normale supérieure et a obtenu un doctorat en économie à l'École des hautes études en sciences sociales en 2006.",
+    image: pascalineDupasImg,
+    social: {
+      linkedin: "https://linkedin.com/in/pascaline-dupas",
+      twitter: "https://twitter.com/pascaline_dupas"
     }
   }
 ];
