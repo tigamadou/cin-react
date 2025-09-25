@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import AccommodationModal from './AccommodationModal';
+import sofitelImage from '../assets/sofitel.jpg';
+import novotelImage from '../assets/novotel.jpg';
+import goldenTulipImage from '../assets/golden_tulip.jpg';
+import maisonRougeImage from '../assets/maison_rouge.jpeg';
 
 interface Accommodation {
   id: number;
@@ -8,10 +12,7 @@ interface Accommodation {
   image: string;
   description: string;
   address?: string;
-  phone?: string;
-  email?: string;
-  amenities?: string[];
-  price?: string;
+  website?: string;
 }
 
 const AccommodationSection: React.FC = () => {
@@ -21,39 +22,39 @@ const AccommodationSection: React.FC = () => {
   const accommodations: Accommodation[] = [
     {
       id: 1,
-      name: "Hôtel du Port",
-      rating: 4,
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
-      description: "Hôtel moderne situé au cœur du port de Cotonou, offrant un accès facile aux principales attractions de la ville. Idéal pour les voyageurs d'affaires et les touristes.",
-      address: "Boulevard de la République, Cotonou",
-      phone: "+229 21 31 32 33",
-      email: "contact@hotelduport.bj",
-      price: "À partir de 45 000 FCFA/nuit",
-      amenities: ["Wi-Fi gratuit", "Parking", "Restaurant", "Piscine", "Salle de fitness", "Service de navette"]
+      name: "Sofitel Cotonou Marina Hotel & Spa",
+      rating: 5,
+      image: sofitelImage,
+      description: "Hôtel 5 étoiles de luxe situé sur le Boulevard de la Marina, offrant 197 chambres avec vue sur l'océan. Proche de l'aéroport et des principales attractions de Cotonou.",
+      address: "Boulevard de la Marina, Cotonou",
+      website: "https://sofitel.accor.com/en/hotels/B845.html"
     },
     {
       id: 2,
-      name: "Hôtel Marina Plaza",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop",
-      description: "Luxueux hôtel avec vue sur la marina, proposant des services haut de gamme et une expérience inoubliable. Parfait pour un séjour de luxe à Cotonou.",
-      address: "1820 Boulevard de la Marina, Cotonou",
-      phone: "+229 21 31 32 34",
-      email: "reservations@marinaplaza.bj",
-      price: "À partir de 85 000 FCFA/nuit",
-      amenities: ["Wi-Fi gratuit", "Parking privé", "Restaurant gastronomique", "Spa", "Piscine", "Salle de conférence", "Service de concierge"]
+      name: "Novotel Cotonou Orisha Hotel",
+      rating: 4,
+      image: novotelImage,
+      description: "Hôtel 4 étoiles moderne situé sur le Boulevard de la Marina avec 110 chambres. Idéal pour les voyageurs d'affaires avec des équipements de conférence complets.",
+      address: "Boulevard de la Marina, Cotonou",
+      website: "https://all.accor.com/hotel/1826/index.fr.shtml?utm_campaign=seo+maps&utm_medium=seo+maps&utm_source=google+Mapshttps://all.accor.com/hotel/1826/index.fr.shtml"
     },
     {
       id: 3,
-      name: "Hôtel Central",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=300&fit=crop",
-      description: "Hôtel d'affaires moderne au centre-ville, idéal pour les voyageurs professionnels et les conférences. Confort et praticité garantis.",
-      address: "Avenue Clozel, Cotonou",
-      phone: "+229 21 31 32 35",
-      email: "info@hotelcentral.bj",
-      price: "À partir de 35 000 FCFA/nuit",
-      amenities: ["Wi-Fi gratuit", "Parking", "Restaurant", "Salle de conférence", "Centre d'affaires", "Service de blanchisserie"]
+      name: "Golden Tulip Le Diplomate Cotonou",
+      rating: 4,
+      image: goldenTulipImage,
+      description: "Hôtel 4 étoiles élégant avec 134 chambres, situé sur le Boulevard de la Marina. Proche de l'Ambassade d'Angola et offrant un service personnalisé de qualité.",
+      address: "No 90 rue 12.017 - Boulevard de la Marina, Cotonou",
+      website: "https://diplomate-cotonou.goldentulip.com/fr-fr/"
+    },
+    {
+      id: 4,
+      name: "Hotel Maison Rouge Cotonou",
+      rating: 4,
+      image: maisonRougeImage,
+      description: "Hôtel boutique 4 étoiles unique avec une décoration personnalisée et des expositions d'art. Situé sur le Boulevard de la Marina avec une terrasse panoramique sur la mer.",
+      address: "Boulevard de la Marina, Cotonou",
+      website: "https://hotel-benin-maison-rouge-cotonou.com/"
     }
   ];
 
@@ -76,48 +77,74 @@ const AccommodationSection: React.FC = () => {
   };
 
   return (
-    <section id="accommodation" className="py-5 bg-white">
+    <section id="accommodation" className="py-5 bg-light">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-4">
-            <div className="accommodation-header">
-              <h2 className="accommodation-title">
-                Hébergements <span className="accent-text">Alternatifs</span>
-              </h2>
-              <div className="accommodation-separator"></div>
-              <p className="accommodation-description">
-                Découvrez nos recommandations d'hébergements près du lieu de la conférence pour votre séjour à Cotonou.
-              </p>
-            </div>
+        {/* Header Section */}
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <h2 className="display-5 fw-bold mb-3 text-dark">
+              Hébergements <span className="text-yellow">Recommandés</span>
+            </h2>
+            <div className="mx-auto mb-4" style={{ width: '80px', height: '4px', backgroundColor: '#28a745' }}></div>
+            <p className="lead text-muted mx-auto" style={{ maxWidth: '600px' }}>
+              Découvrez nos recommandations d'hébergements près du lieu de la conférence pour votre séjour à Cotonou.
+            </p>
           </div>
-          
-          <div className="col-lg-8">
-            <div className="accommodation-cards">
-              {accommodations.map(accommodation => (
-                <div 
-                  key={accommodation.id} 
-                  className="accommodation-card"
-                  onClick={() => handleAccommodationClick(accommodation)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <div className="card-image">
-                    <img 
-                      src={accommodation.image} 
-                      alt={accommodation.name}
-                    />
+        </div>
+        
+        {/* Accommodations Grid */}
+        <div className="row g-4">
+          {accommodations.map(accommodation => (
+            <div key={accommodation.id} className="col-lg-6 col-xl-3">
+              <div 
+                className="card h-100 shadow-sm border-0 accommodation-card-hover"
+                onClick={() => handleAccommodationClick(accommodation)}
+                style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
+              >
+                <div className="position-relative">
+                  <img 
+                    src={accommodation.image} 
+                    alt={accommodation.name}
+                    className="card-img-top"
+                    style={{ height: '200px', objectFit: 'cover' }}
+                  />
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge bg-warning text-dark px-2 py-1">
+                      {accommodation.rating} ⭐
+                    </span>
                   </div>
-                  <div className="card-content">
-                    <h3 className="card-title">{accommodation.name}</h3>
-                    <div className="card-rating">
-                      {renderStars(accommodation.rating)}
-                    </div>
-                    <p className="card-description">{accommodation.description}</p>
-                    <button className="card-btn">
-                      DÉTAILS
+                </div>
+                
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-bold text-dark mb-2" style={{ fontSize: '1.1rem' }}>
+                    {accommodation.name}
+                  </h5>
+                  
+                  <div className="mb-3">
+                    {renderStars(accommodation.rating)}
+                  </div>
+                  
+                  <p className="card-text text-muted flex-grow-1" style={{ fontSize: '0.9rem', lineHeight: '1.4' }}>
+                    {accommodation.description}
+                  </p>
+                  
+                  <div className="mt-auto">
+                    <button className="btn btn-yellow w-100 fw-semibold">
+                      Voir les détails
                     </button>
                   </div>
                 </div>
-              ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Additional Info */}
+        <div className="row mt-5">
+          <div className="col-12 text-center">
+            <div className="alert alert-info bg-yellow border-0" style={{ backgroundColor: '#e3f2fd' }}>
+              <i className="fas fa-info-circle me-2"></i>
+              <strong>Note :</strong> Tous les hôtels sont situés sur le Boulevard de la Marina, à proximité du lieu de la conférence.
             </div>
           </div>
         </div>

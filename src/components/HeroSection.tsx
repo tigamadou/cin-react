@@ -1,6 +1,6 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import type { TimeLeft } from '../types';
-import RegistrationModal from './RegistrationModal';
+// import RegistrationModal from './RegistrationModal';
 import heroBackground from '../assets/pictogramm.svg';
 
 interface HeroSectionProps {
@@ -8,15 +8,15 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ timeLeft }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
   return (
     <>
       {/* Hero Section */}
@@ -76,17 +76,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ timeLeft }) => {
                   <div className="counter-item-label">SECONDES</div>
               </div>
             </div>
-            <div className="d-flex gap-3 mb-4 mt-5">
+            {/* <div className="d-flex gap-3 mb-4 mt-5">
                 <button className="btn btn-cta" onClick={handleOpenModal}>S'inscrire</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       
-      <RegistrationModal 
+      {/* <RegistrationModal 
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-      />
+      /> */}
     </>
   );
 };

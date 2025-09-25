@@ -5,10 +5,7 @@ interface Accommodation {
   image: string;
   description: string;
   address?: string;
-  phone?: string;
-  email?: string;
-  amenities?: string[];
-  price?: string;
+  website?: string;
 }
 
 interface AccommodationModalProps {
@@ -61,26 +58,17 @@ const AccommodationModal: React.FC<AccommodationModalProps> = ({ accommodation, 
                       </div>
                     )}
                     
-                    {accommodation.phone && (
+                    
+                    
+                    {accommodation.website && (
                       <div className="info-item">
-                        <i className="bi bi-telephone-fill"></i>
-                        <span>{accommodation.phone}</span>
+                        <i className="bi bi-globe"></i>
+                        <a href={accommodation.website} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                          Visiter le site web
+                        </a>
                       </div>
                     )}
                     
-                    {accommodation.email && (
-                      <div className="info-item">
-                        <i className="bi bi-envelope-fill"></i>
-                        <span>{accommodation.email}</span>
-                      </div>
-                    )}
-                    
-                    {accommodation.price && (
-                      <div className="info-item">
-                        <i className="bi bi-currency-euro"></i>
-                        <span>{accommodation.price}</span>
-                      </div>
-                    )}
                   </div>
                   
                   <div className="accommodation-description">
@@ -88,25 +76,7 @@ const AccommodationModal: React.FC<AccommodationModalProps> = ({ accommodation, 
                     <p>{accommodation.description}</p>
                   </div>
                   
-                  {accommodation.amenities && accommodation.amenities.length > 0 && (
-                    <div className="accommodation-amenities">
-                      <h4>Équipements</h4>
-                      <div className="amenities-list">
-                        {accommodation.amenities.map((amenity, index) => (
-                          <span key={index} className="amenity-tag">
-                            {amenity}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                   
-                  <div className="accommodation-actions">
-        
-                    <button className="btn btn-light ">
-                      Plus d'informations
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

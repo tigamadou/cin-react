@@ -8,9 +8,9 @@ import {
   ScheduleSection,
   DownloadSection,
   VenueSection,
-  // AccommodationSection,
+  AccommodationSection,
   StatsSection,
-  RegistrationSection,
+  // RegistrationSection,
   MapSection,
   Footer
 } from './components';
@@ -66,9 +66,10 @@ function App() {
       <SpeakersSection speakers={speakers} />
       <ScheduleSection scheduleByDay={scheduleByDay} />
       <VenueSection />
+      <AccommodationSection />
       <DownloadSection />
       <StatsSection />
-      <RegistrationSection />
+      {/* <RegistrationSection /> */}
       <MapSection />
       <Footer />
     </div>
