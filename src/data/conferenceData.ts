@@ -92,7 +92,7 @@ export const speakers: Speaker[] = [
   {
     id: 7,
     name: "Dr Hoang NGAN",
-    title: "Expert en Nutrition",
+    title: "Experte en Nutrition",
     company: "Ministère de la Santé du Vietnam",
     bio: "Dr. NGAN présentera de manière globale la stratégie nationale qu'a adopté le Vietnam pour parvenir à baisser la prévalence de la malnutrition chronique au niveau national. Elle mettra en évidence la volonté politique se traduisant par l'obligation de chaque province d'investir dans la réduction de la malnutrition. Elle nous présentera quelques exemples d'interventions et évoquera également des mesures de lutte contre l'obésité à travers la loi sur la taxation des boissons sucrées.",
     image: hoangNganImg,
