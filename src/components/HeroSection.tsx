@@ -2,6 +2,7 @@
 import type { TimeLeft } from '../types';
 // import RegistrationModal from './RegistrationModal';
 import heroBackground from '../assets/pictogramm.svg';
+import { YOUTUBE_STREAMING_URL } from '../data/conferenceData';
 
 interface HeroSectionProps {
   timeLeft: TimeLeft;
@@ -76,9 +77,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ timeLeft }) => {
                   <div className="counter-item-label">SECONDES</div>
               </div>
             </div>
-            {/* <div className="d-flex gap-3 mb-4 mt-5">
-                <button className="btn btn-cta" onClick={handleOpenModal}>S'inscrire</button>
-            </div> */}
+            <div className="d-flex gap-3 mb-4 mt-5">
+                <a 
+                  href={YOUTUBE_STREAMING_URL} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-danger d-flex align-items-center gap-2"
+                >
+                  <i className="bi bi-youtube"></i>
+                  Regarder la vidéo
+                </a>
+            </div>
           </div>
         </div>
       </div>

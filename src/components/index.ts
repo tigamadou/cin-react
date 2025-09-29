@@ -11,6 +11,7 @@ export { default as AccommodationModal } from './AccommodationModal';
 export { default as StatsSection } from './StatsSection';
 export { default as RegistrationSection } from './RegistrationSection';
 export { default as RegistrationModal } from './RegistrationModal';
+export { default as PicturesSection } from './PicturesSection';
 export { default as MapSection } from './MapSection';
 export { default as Loader } from './Loader';
 export { default as Footer } from './Footer';

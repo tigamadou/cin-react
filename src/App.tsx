@@ -11,6 +11,7 @@ import {
   AccommodationSection,
   StatsSection,
   // RegistrationSection,
+  PicturesSection,
   MapSection,
   Footer
 } from './components';
@@ -70,6 +71,7 @@ function App() {
       <DownloadSection />
       <StatsSection />
       {/* <RegistrationSection /> */}
+      <PicturesSection />
       <MapSection />
       <Footer />
     </div>

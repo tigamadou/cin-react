@@ -151,6 +151,9 @@ export const speakers: Speaker[] = [
   }
 ];
 
+// YouTube streaming URL for the conference
+export const YOUTUBE_STREAMING_URL = "https://www.youtube.com/watch?v=X9KA_9rwUBw";
+
 export const scheduleByDay: ScheduleByDay = {
   day0: [
     { time: "09:00 - 20:00", title: "Arrivée et accueil des hôtes", type: "break" }
